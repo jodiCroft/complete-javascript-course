@@ -77,27 +77,73 @@ TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀
 */
 
-const dolphinScores = [97, 112, 101];
+// const dolphinScores = [97, 112, 101];
 
-const dolphinsAvg =
-  dolphinScores.reduce((a, b) => a + b) / dolphinScores.length;
+// const dolphinsAvg =
+//   dolphinScores.reduce((a, b) => a + b) / dolphinScores.length;
 
-const koalaScores = [97, 112, 101];
+// const koalaScores = [97, 112, 101];
 
-const koalasAvg = koalaScores.reduce((a, b) => a + b) / koalaScores.length;
+// const koalasAvg = koalaScores.reduce((a, b) => a + b) / koalaScores.length;
 
-console.log(dolphinsAvg, koalasAvg);
+// console.log(dolphinsAvg, koalasAvg);
 
-if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
-  console.log(
-    `The Dolphins won the trophy with an average score of ${dolphinsAvg}`
-  );
-} else if (koalasAvg > dolphinsAvg && koalasAvg >= 100) {
-  console.log(
-    `The Koalas won the trophy with an average score of ${koalasAvg}`
-  );
-} else if ((koalasAvg === dolphinsAvg && koalasAvg) || dolphinsAvg >= 100) {
-  console.log(
-    `The Dolphins and the Koalas have tied with average scores of ${dolphinsAvg}`
-  );
-} else console.log(`Nobody won!`);
+// if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
+//   console.log(
+//     `The Dolphins won the trophy with an average score of ${dolphinsAvg}`
+//   );
+// } else if (koalasAvg > dolphinsAvg && koalasAvg >= 100) {
+//   console.log(
+//     `The Koalas won the trophy with an average score of ${koalasAvg}`
+//   );
+// } else if ((koalasAvg === dolphinsAvg && koalasAvg) || dolphinsAvg >= 100) {
+//   console.log(
+//     `The Dolphins and the Koalas have tied with average scores of ${dolphinsAvg}`
+//   );
+// } else console.log(`Nobody won!`);
+
+// const day = "purple";
+
+// if (day === "monday") {
+//   console.log("clean room", "wash hair");
+// } else if (
+//   day === "tuesday" ||
+//   day === "wednesday" ||
+//   day === "thursday" ||
+//   day === "friday" ||
+//   day === "saturday" ||
+//   day === "sunday"
+// ) {
+//   console.log("do a coding challenge in the morning!");
+// } else console.log("not a valid day");
+
+// Coding Challenge #4
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, 
+it's usual to tip 15% 
+if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to caluclate the tip, depending on the bill value. 
+Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 
+(If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). 
+Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+GOOD LUCK 😀
+*/
+
+const bill = 10;
+
+const tip = bill >= 50 && bill <= 300 ? 0.15 : 0.2;
+
+console.log(
+  `The bill was ${bill} dollars, the tip was ${bill * tip} dollars, which is ${
+    tip * 100
+  } percent, and the total was ${bill + bill * tip} dollars`
+);
